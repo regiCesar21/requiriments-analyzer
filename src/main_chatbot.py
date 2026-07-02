@@ -63,7 +63,7 @@ def load_bd():
 
 
 def main():
-    st.title("TransforMind 🎈")
+    st.title("Requirements Analyzer")
     
     audio_bk = None
 

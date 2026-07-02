@@ -1,0 +1,48 @@
+Reunião de Levantamento de Requisitos — Sistema de Gestão de RH
+Projeto: RH Digital — Empresa Alphacorp
+Data: 25 de junho de 2026
+Participantes: Juliana (PO), Felipe (Tech Lead), Mariana (UX), Diego (Analista de RH)
+
+Diego abriu a reunião explicando que o processo atual de folha de pagamento é feito em planilhas Excel e gera muitos erros.
+
+A Alphacorp possui atualmente 1.200 funcionários distribuídos em 5 filiais.
+
+Juliana registrou que o sistema deverá permitir que o RH cadastre novos funcionários com nome, CPF, cargo, salário e data de admissão.
+
+Felipe disse que o sistema precisará processar o cálculo da folha de pagamento em menos de 10 segundos para até 500 funcionários simultâneos.
+
+Mariana apresentou os resultados da pesquisa de satisfação com o time atual de RH.
+
+Diego anotou que o portal deve permitir que os funcionários consultem seus próprios contracheques e holerites a qualquer momento.
+
+Juliana levantou que, se um funcionário acumular mais de 3 faltas injustificadas no mês, o sistema deverá gerar um alerta automático para o gestor responsável.
+
+Felipe complementou dizendo que todos os dados pessoais dos funcionários deverão estar em conformidade com a LGPD, com acesso restrito e logs de auditoria.
+
+Houve uma discussão sobre como lidar com funcionários afastados por licença médica.
+
+Diego disse que o sistema deve permitir que o gestor registre afastamentos, informando tipo (médico, maternidade, acidente) e período estimado.
+
+Mariana argumentou que a interface do sistema precisa ser acessível e intuitiva, sem necessidade de treinamento técnico para uso básico.
+
+Juliana anotou que somente o RH e os gestores diretos podem visualizar o histórico salarial de um funcionário.
+
+Felipe estimou que o sistema deverá estar disponível 99,5% do tempo, com janelas de manutenção agendadas aos domingos entre 1h e 4h.
+
+A equipe discutiu brevemente sobre a integração com o sistema de ponto eletrônico já existente.
+
+Felipe disse que o sistema deve integrar com o sistema de ponto via API REST, importando automaticamente as marcações diárias.
+
+Diego levantou que, se o saldo de horas extras ultrapassar 40 horas no mês, o pagamento adicional deve ser feito automaticamente na folha seguinte.
+
+Mariana mencionou que seria bom ter um dashboard com indicadores de turnover e absenteísmo, mas ficou como item de segunda fase.
+
+A equipe decidiu que o MVP não incluirá módulo de recrutamento e seleção.
+
+Juliana registrou que o sistema deverá gerar relatórios de folha de pagamento em PDF e Excel, com possibilidade de filtro por filial, cargo e período.
+
+Felipe apontou que o tempo de resposta de qualquer tela do sistema não deve exceder 2 segundos em condições normais de uso.
+
+A reunião foi encerrada às 15h45.
+
+Próxima reunião agendada para 02 de julho de 2026.

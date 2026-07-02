@@ -1,0 +1,59 @@
+Ata de Reunião — Levantamento de Requisitos
+Sistema: Plataforma de Agendamento Online — Clínica MedVida
+Data: 27 de junho de 2026
+Local: Sala de Reuniões 2, Sede MedVida
+Participantes: Dr. Roberto (Diretor Clínico), Patrícia (Gerente de TI), Lucas (Dev Lead), Amanda (UX/UI), Cláudio (Recepção)
+
+Dr. Roberto abriu a reunião destacando que a clínica atende cerca de 300 pacientes por dia e o sistema atual de agendamento por telefone está sobrecarregando a recepção.
+
+Cláudio explicou que a equipe de recepção recebe em média 180 ligações diárias só para marcar, desmarcar ou verificar consultas.
+
+Patrícia disse que o objetivo principal é lançar uma plataforma web e mobile para que os pacientes consigam agendar consultas sem precisar ligar para a clínica.
+
+Amanda apresentou benchmarks de plataformas concorrentes e mostrou que a maioria dos usuários abandona o processo se ele tiver mais de 4 etapas.
+
+Dr. Roberto levantou que o sistema deverá permitir que o paciente visualize os horários disponíveis de cada médico e escolha o que melhor se encaixa na sua agenda.
+
+Lucas disse que a plataforma precisará suportar pelo menos 500 agendamentos simultâneos sem degradação de performance.
+
+Cláudio anotou que o sistema deve enviar uma confirmação por email e SMS assim que o agendamento for concluído com sucesso.
+
+Patrícia levantou uma questão importante: toda a plataforma precisará estar em conformidade com a LGPD, pois lida com dados sensíveis de saúde.
+
+Dr. Roberto concordou e complementou dizendo que o prontuário eletrônico do paciente não pode ser acessado por nenhum funcionário que não seja o médico responsável pelo caso ou o próprio paciente.
+
+Amanda argumentou que o sistema tem que funcionar bem em telas pequenas, porque 68% dos pacientes usam smartphone para marcar consultas.
+
+Houve uma discussão longa sobre cancelamentos de última hora, que geram ociosidade nos consultórios e prejuízo financeiro para a clínica.
+
+Dr. Roberto pediu que, se o paciente cancelar com menos de 2 horas de antecedência, o sistema deverá registrar a ocorrência e bloquear novos agendamentos por 30 dias.
+
+Lucas levantou que o tempo de resposta para carregar a lista de horários disponíveis tem que ser inferior a 1,5 segundos em condições normais de uso.
+
+Cláudio mencionou que muitos pacientes idosos preferem ligar para a recepção mesmo tendo smartphone, porque não sabem usar aplicativos.
+
+Amanda disse que por isso os pacientes querem poder agendar de forma completamente intuitiva, sem precisar de treinamento ou manual.
+
+Patrícia registrou que o sistema deverá manter logs de todas as ações realizadas pelos usuários pelo período mínimo de 5 anos, conforme exigência do Conselho Federal de Medicina.
+
+Dr. Roberto perguntou sobre a possibilidade de integração com o sistema de prontuário eletrônico já usado pela clínica.
+
+Lucas respondeu que o sistema deve se integrar com o prontuário via API REST, sincronizando automaticamente o histórico de consultas do paciente.
+
+Amanda ressaltou que o fluxo de agendamento não pode ter mais de 3 telas para ser concluído, para não perder o usuário no meio do processo.
+
+Patrícia anotou que somente médicos cadastrados e aprovados pela coordenação clínica poderão ter agenda disponível para agendamento online pelos pacientes.
+
+A equipe discutiu rapidamente como lidar com diferentes planos de saúde e convênios aceitos por cada médico.
+
+Dr. Roberto disse que o sistema deve permitir que o paciente informe o plano de saúde no momento do agendamento, e o sistema verificará automaticamente se aquele médico atende o convênio informado.
+
+Cláudio levantou que às vezes os médicos precisam bloquear períodos da agenda para cirurgias ou eventos externos, e hoje isso é feito manualmente em planilha.
+
+Lucas anotou que o sistema precisa permitir que o médico ou a secretária bloqueie intervalos de tempo na agenda, com justificativa obrigatória.
+
+Amanda finalizou dizendo que as mensagens de erro e confirmação precisam ser escritas de forma empática, evitando textos técnicos que assustam o usuário.
+
+A equipe concordou que o MVP contemplará apenas agendamento de consultas presenciais, sem módulo de telemedicina por enquanto.
+
+Dr. Roberto encerrou a reunião às 17h10 e a próxima sessão foi agendada para 04 de julho de 2026.

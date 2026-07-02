@@ -1,0 +1,56 @@
+Especificação de Requisitos — Sistema de Gestão de Pedidos
+Versão 1.0 | Junho de 2026
+
+Este documento descreve os requisitos do sistema de gestão de pedidos para a empresa Exemplo S.A.
+A reunião de levantamento foi realizada em maio de 2026 com a participação de cinco stakeholders.
+O objetivo principal é modernizar o processo de compras e melhorar a experiência dos clientes.
+
+1. Requisitos Funcionais
+
+O sistema deve permitir que o usuário realize login com email e senha.
+O sistema deve permitir a recuperação de senha via email cadastrado.
+O sistema deve permitir que o cliente adicione produtos ao carrinho de compras.
+O sistema deve exibir o histórico de pedidos dos últimos 12 meses para o usuário autenticado.
+O sistema deve enviar uma notificação por email ao cliente após a confirmação do pedido.
+O sistema deve permitir o cancelamento de pedidos com status "aguardando pagamento".
+O sistema deve gerar relatórios de vendas mensais em formato PDF e CSV.
+
+2. Requisitos Não-Funcionais
+
+O sistema deve processar no máximo 500 requisições por segundo em horário de pico.
+O sistema deve ter disponibilidade de 99.9% ao longo do mês.
+O tempo de resposta para qualquer consulta não deve exceder 2 segundos.
+Todos os dados de pagamento devem ser criptografados usando AES-256.
+O sistema deve suportar até 10000 usuários simultâneos sem degradação de desempenho.
+O sistema deve ser compatível com os navegadores Chrome, Firefox e Safari nas versões dos últimos 2 anos.
+
+3. Regras de Negócio
+
+Se o valor do pedido for superior a R$ 500, então o frete deve ser gratuito.
+Somente usuários com perfil "administrador" podem aprovar descontos acima de 20%.
+Se o estoque de um produto for inferior a 5 unidades, então o sistema deve notificar o gestor.
+Apenas clientes com cadastro ativo e verificado podem realizar compras parceladas.
+Se o pagamento não for confirmado em até 30 minutos, então o pedido deve ser cancelado automaticamente.
+
+4. Contexto Adicional
+
+A empresa possui atualmente um sistema legado desenvolvido em 2015 que será substituído.
+A equipe de desenvolvimento é composta por oito engenheiros de software sênior.
+O prazo de entrega estimado para a primeira release é de seis meses.
+O orçamento aprovado para o projeto foi definido na reunião de diretoria do mês passado.
+
+5. Requisitos de Qualidade e Segurança
+
+O sistema deve registrar logs de auditoria para todas as operações de escrita no banco de dados.
+O sistema deve ser facilmente utilizável e intuitivo para usuários sem treinamento técnico.
+O sistema deve bloquear automaticamente contas após 5 tentativas de login malsucedidas.
+O sistema deve realizar backup automático dos dados a cada 24 horas.
+O sistema deve estar em conformidade com a LGPD para tratamento de dados pessoais.
+
+6. Notas da Reunião
+
+Durante a reunião, ficou acordado que os usuários precisarão acessar o sistema pelo celular.
+O diretor de TI mencionou que a segurança dos dados é a prioridade máxima do projeto.
+Foi discutido que o sistema deve ser rápido e fácil de usar.
+A equipe concluiu que integrações com sistemas de pagamento externos serão necessárias.
+O sistema deve integrar com as APIs do PagSeguro e do Mercado Pago para processamento de pagamentos.

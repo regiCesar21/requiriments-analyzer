@@ -1,0 +1,43 @@
+Ata de Reunião — Levantamento de Requisitos
+Projeto: Portal do Cliente — Banco Nexus
+Data: 10 de junho de 2026
+Participantes: Ana (PO), Carlos (Dev Lead), Fernanda (UX), Ricardo (Segurança), Marcos (Cliente)
+
+A reunião teve início às 14h com a apresentação do contexto do projeto pelo gerente de produto.
+O banco Nexus atende atualmente mais de 800 mil clientes e precisa modernizar o canal digital.
+Marcos, representando a área de negócios, abriu a reunião explicando as principais dores dos clientes.
+
+Segundo Marcos, os clientes reclamam muito que não conseguem ver o extrato consolidado de todas as contas em um único lugar. Ana anotou que o portal precisará mostrar o extrato unificado de conta corrente, poupança e investimentos na mesma tela. Carlos levantou que o sistema terá que carregar essas informações em menos de 3 segundos para que a experiência não seja frustrante.
+
+Fernanda apresentou os resultados da pesquisa de UX. Ela mostrou que 73% dos usuários acessam o banco pelo celular, então ficou decidido que o portal tem que funcionar perfeitamente em dispositivos móveis e tablets. Ricardo aproveitou para lembrar que qualquer dado financeiro trafegado precisa ser criptografado — ele vai exigir TLS 1.3 como protocolo mínimo.
+
+A discussão avançou para o tema de transferências. O time concordou que os clientes precisam conseguir fazer TED e PIX diretamente pelo portal. Marcos pediu que o limite padrão para transferências sem autenticação adicional seja de R$ 1.000 — acima disso o sistema deverá exigir confirmação por biometria ou token SMS. Carlos estimou que o sistema de transferências precisará processar pelo menos 200 transações simultâneas sem falar de degradação de performance.
+
+Ricardo levantou uma questão importante sobre segurança: se o usuário errar a senha três vezes seguidas, a conta tem que ser bloqueada automaticamente e o cliente deve receber um email de aviso. O desbloqueio só pode ser feito pelo atendimento humano ou pelo próprio cliente via validação de identidade. Fernanda concordou, mas pediu que a mensagem de bloqueio seja clara e amigável, sem jargão técnico.
+
+Houve uma discussão longa sobre notificações. No final, a equipe decidiu que o portal deve enviar notificações push para toda movimentação acima de R$ 50 na conta. Ana registrou também que os clientes querem poder configurar alertas personalizados — por exemplo, ser avisado quando o saldo cair abaixo de um valor definido pelo próprio usuário.
+
+O tema de acessibilidade foi levantado por Fernanda quase no final da reunião. Ela argumentou que o portal precisa seguir as diretrizes WCAG 2.1 nível AA para garantir acesso a pessoas com deficiência visual. Ricardo complementou dizendo que o sistema também deverá estar em conformidade com a LGPD em todos os pontos de coleta de dados pessoais.
+
+Marcos mencionou de passagem que seria legal ter um chatbot no portal, mas isso ficou para uma segunda fase do projeto. A equipe concluiu que o MVP não inclui inteligência artificial.
+
+Antes de encerrar, Carlos lembrou que o sistema precisará manter logs de auditoria de todas as operações financeiras pelo prazo mínimo de 5 anos, conforme exigência do Banco Central. Ana finalizou dizendo que o time de QA precisará de acesso a um ambiente de homologação completo antes do lançamento.
+
+A reunião foi encerrada às 16h30. Próximo encontro agendado para 17 de junho.
+
+---
+
+Email complementar de Ricardo (Segurança) — enviado em 11/06/2026:
+
+Pessoal,
+
+Após a reunião de ontem, revisando minhas anotações, lembrei de dois pontos que esqueci de mencionar.
+
+Primeiro, toda sessão de usuário precisa expirar automaticamente após 15 minutos de inatividade. Deixar sessões abertas é um vetor de ataque clássico em portais bancários.
+
+Segundo, o sistema não pode armazenar senhas em texto plano de forma alguma — precisamos de hash com bcrypt ou Argon2, com salt único por usuário. Parece óbvio, mas já vi casos em que isso foi negligenciado.
+
+Além disso, qualquer exportação de dados (extrato em PDF, por exemplo) deverá ser registrada no log de auditoria com identificação do usuário, data, hora e IP de origem.
+
+Abraço,
+Ricardo

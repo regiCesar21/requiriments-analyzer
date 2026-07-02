@@ -238,14 +238,6 @@ Chatbot_TransforMind/
 
 ---
 
-## Fluxo do Chatbot
-
-![Figura 01 - Fluxo do chatbot](image/img_readme/fluxo_chatbot_mains.png)
-
-## Fluxo de Avaliação
-
-![Figura 02 - Fluxo dos testes](image/img_readme/fluxo_test_desempenho.png)
-
 ---
 
 ## Limitações Conhecidas
